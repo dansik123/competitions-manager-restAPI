@@ -1,0 +1,22 @@
+spring:
+  jpa: #Database JPA configuration
+    show-sql: true #Displays SQL executed on database in console
+    hibernate:
+      ddl-auto: create-drop #Creates tables automatically and then drops is after p
+    defer-datasource-initialization: true
+  datasource: # database credentials and URL to connect
+    platform: org.hibernate.dialect.H2Dialect
+    url: jdbc:h2:mem:shooting_competitions
+    username: user
+    password: password
+    driverClassName: org.h2.Driver
+auth: #JWT auth variables for Authorization. Used in AuthConfig.java file
+  access-token-key: 1234567890123456789012345678901234567890123456789012345678901234
+  refresh-token-key: 4321098765432109876543210987654321098765432109876543210987654321
+  validity-time:
+    access-token: 600000 #10min
+    refresh-token: 864000000 #10days
+cors-allow-origin: http://localhost:5173
+media:
+  images-storage-path: /home/fake_test/path
+

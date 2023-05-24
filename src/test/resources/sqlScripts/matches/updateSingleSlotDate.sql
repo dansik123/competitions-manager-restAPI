@@ -1,0 +1,1 @@
+UPDATE shooting_slots SET slot_date = '2016-04-21' WHERE id = 2;

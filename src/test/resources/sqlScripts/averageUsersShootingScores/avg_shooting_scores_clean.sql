@@ -1,0 +1,1 @@
+DELETE FROM avg_shooting_scores;

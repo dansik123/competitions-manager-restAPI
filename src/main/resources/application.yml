@@ -1,0 +1,24 @@
+spring:
+  jpa: #Database JPA configuration
+    database: POSTGRESQL #type of database
+    #show-sql: true #Displays SQL executed on database in console
+    #hibernate:
+      #ddl-auto: update #create-drop #Creates tables automatically and then drops is after p
+  datasource: # database credentials and URL to connect(use environment variables to set up)
+    url: 
+    username: 
+    password: 
+    driverClassName: org.postgresql.Driver
+  servlet:
+    multipart:
+      max-file-size: 128KB
+      max-request-size: 128KB
+auth: #JWT auth variables for Authorization. Used in config/AuthConfig.java file(use environment variables to set up)
+  access-token-key: 
+  refresh-token-key: 
+  validity-time:
+    access-token: 600000 #10min
+    refresh-token: 864000000 #10days
+cors-allow-origin: 
+media: #Storage media variables used in config/MediaConfig.java file (use environment variables to set up)
+  images-storage-path: 

@@ -24,7 +24,7 @@ it must be 512 bit long.
 For this purpose you can also use to generate keys for you:
 https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
 
-Access and refresh tokens keys
+Token keys environment variables:
 - AUTH_ACCESS-TOKEN-KEY= ${new_access_JWT_token_key}
 - AUTH_REFRESH-TOKEN-KEY= ${new_refresh_JWT_token_key}
 
@@ -49,7 +49,7 @@ docker build -t backend:0.1 .
 #### Docker container run(container have custom Authorization keys but still don't use TLS)
 
 ```PowerShell
-docker run --name ${run_container_name} -d -p ${host_post}:8080 
+docker run --name ${run_container_name} -d -p ${host_port}:8080 
 -e SPRING_DATASOURCE_URL=${database url}
 -e SPRING_DATASOURCE_USERNAME=${database username}
 -e SPRING_DATASOURCE_PASSWORD=${database password}
